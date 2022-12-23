@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from charityfinderapp.charityapp import views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('/all-charities',views.getAllData),
+    path('/edit/<int:id>',views.edit),
+    path('add-charity',views.addCharity),
+    path('add-charity',views.addCharity),
 ]
